@@ -1,9 +1,19 @@
 
 
 
-function ExpenseItem(){
+function ExpenseItem() {
     return (
-        <h1>item</h1>
+        <div>
+            <div>
+                <div>date</div>
+            </div>
+            <div>
+                <h2>Item</h2>
+            </div>
+            <div>
+                sum
+            </div>
+        </div>
     )
 }
 
