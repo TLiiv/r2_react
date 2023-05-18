@@ -56,7 +56,7 @@ export default App;
 
 // värvid
 // #000000
-// #14213d
-// #fca311
-// #e5e5e5
+// #14213d sinine
+// #fca311 oranz
+// #e5e5e5 hall
 // #ffffff
