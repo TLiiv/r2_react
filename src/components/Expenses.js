@@ -1,5 +1,6 @@
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
+import Card from './Card';
 
 function item () {
     const items = [
@@ -26,7 +27,7 @@ function item () {
 
 
     return(
-        <div className="expenses">
+        <Card className="expenses">
             {items.map((item) => (
                 <ExpenseItem
                     key={item.id}
@@ -35,7 +36,7 @@ function item () {
                     date={item.date}
                 />
             ))}
-        </div>
+        </Card>
     )
 }
 
