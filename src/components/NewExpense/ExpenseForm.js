@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 function ExpenseForm(props){
+    const [show,setShow] = useState(false);
     const [enteredTitle, setEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [enteredDate, setEnteredDate] = useState("");
@@ -35,10 +36,16 @@ function ExpenseForm(props){
         setEnteredAmount("");
         setEnteredDate("");
     }
-
+    const showFormHandler = () => {
+        setShow(!show);
+    }
 
     return (
+        <div>
+        <button onClick={showFormHandler} >Add New Expense</button>
+        {show && (
         <form onSubmit={submitHandler}>
+
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
@@ -56,7 +63,10 @@ function ExpenseForm(props){
             <div className='new-expense__actions'>
                 <button type='submit'>Add Expense</button>
             </div>
+            
         </form>
+        )}
+        </div>
     )
 }
 
