@@ -23,7 +23,7 @@ function Expenses(props) {
     
 
     return (
-        <li>
+        <div>
             <Card className="expenses">
                 <ExpensesFilter
                     onFilterChange={expensesFilterHandler}
@@ -33,7 +33,7 @@ function Expenses(props) {
                 <ExpensesList filteredExpenses={filteredExpenses} />
 
             </Card>
-        </li>
+        </div>
     )
 }
 
